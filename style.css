@@ -60,15 +60,14 @@ body{
     left: 60%;
 }
 
-.circle button.close{
-    top: 60%;
-    /* left: 50%; */
-    transform: rotate(90deg);
-    transform-origin: top left;
+ .circle button.close{
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
 
-}
+} 
 
-.container.show-nav.circle{
+.container.show-nav .circle{
     transform: rotate(-70deg);
 }
 
