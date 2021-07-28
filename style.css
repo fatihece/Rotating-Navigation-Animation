@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #333;
+    color: #222;
+    overflow-x: hidden;
+    
+}
+
+.container{
+    background-color:#fafafa ;
+    min-height: 100vh;
+    width:100vw;
+    margin: 0 auto;
+    padding: 4em;
+    transform-origin: top left;
+    transition: transform .5s linear;
+}
+
+.container.show-nav{
+    transform: rotate(-20deg);
+}
+
+.circle-container{
+    position: fixed;
+    top: -100px;
+    left: -100px;
+}
+
+.circle{
+    background-color: #ff7979;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    position: relative;
+    transition: transform .5s linear;
+
+}
+
+.circle button{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 4em;
+    font-size: 1.5em;
+    border: none;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    
+}
+
+
+.circle button.open{
+    left: 60%;
+}
+
+.circle button.close{
+    top: 60%;
+    /* left: 50%; */
+    transform: rotate(90deg);
+    transform-origin: top left;
+
+}
+
+.container.show-nav.circle{
+    transform: rotate(-70deg);
+}
+
+
+.nav{
+    position: fixed;
+    bottom: 2em;
+    left: 0;
+    padding-left: 2em;
+    
+}
+
+nav ul{
+    list-style: none;
+}
+
+nav ul li{
+    text-transform: uppercase;
+    margin: 2em 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li i{
+    font-size: 1rem;
+    margin-right: .8em;
+}
+
+nav ul li:nth-child(2){
+    margin-left: 1em;
+    transform: translateX(-150%);
+}
+
+nav ul li:last-child{
+    margin-left: 2em;
+    transform: translateX(-200%);
+}
+
+.container.show-nav + nav li{
+    transform: translateX(0);
+    transition-delay: 0.4s;
+}
+
+.content{
+    max-width: 1000px;
+    margin: 0 auto;
+
+}
+
+.content small{
+    font-style: italic;
+    color: #222;
+}
+
+.content p{
+    color: #333;
+    line-height: 1.5;
+}
+
+.content img{
+    max-width: 100%;
+}
+
+.content h3{
+    margin-bottom: 0.5em;
+}
